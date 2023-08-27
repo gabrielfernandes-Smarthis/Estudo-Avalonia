@@ -1,0 +1,14 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:TesteAvalonia">
+    <Design.PreviewWith>
+		<StackPanel Margin="50">
+            <Label Content="Titulo"/>
+		</StackPanel>
+    </Design.PreviewWith>
+
+  <Style Selector="Label">
+    <!-- Set Defaults -->
+	<Setter Property="Foreground" Value="Black"/>
+  </Style>
+</Styles>

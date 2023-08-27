@@ -1,0 +1,70 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:TesteAvalonia">
+  <Design.PreviewWith>
+	  <StackPanel Background="{DynamicResource DarkBlueBrush}">
+	    <controls:LargeLabelControl Margin="5" />
+		<controls:LargeLabelControl Margin="5" Classes="button" />
+	  </StackPanel>
+  </Design.PreviewWith>
+
+	<Style Selector="controls|LargeLabelControl">
+	<!-- Set Defaults -->
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="Background" Value="{DynamicResource MidBlueBrush}"/>
+	  
+		<Setter Property="Template">
+			<ControlTemplate>
+				<Border 
+					Background="{TemplateBinding Background}"
+					Padding="15,7" >
+					<StackPanel>
+						<Label 
+							Foreground="{TemplateBinding Foreground}" 
+							Content="{TemplateBinding LargeText}"
+							Padding="0" 
+							FontSize="22" 
+							HorizontalAlignment="Center"/>
+						
+						<Label 
+							Foreground="{TemplateBinding Foreground}" 
+							Content="{TemplateBinding SmallText}"
+							Padding="0" 
+							FontSize="11" 
+							HorizontalAlignment="Center"/>
+					</StackPanel>
+				</Border>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+
+	<Style Selector="controls|LargeLabelControl.button">
+		<!-- Set Defaults -->
+		<Setter Property="Foreground" Value="White"/>
+		<Setter Property="Background" Value="{DynamicResource MidBlueBrush}"/>
+
+		<Setter Property="Template">
+			<ControlTemplate>
+				<StackPanel>
+					<Label 
+						Foreground="{TemplateBinding Foreground}" 
+						Background="{TemplateBinding Background}" 
+						Content="{TemplateBinding LargeText}"
+						Padding="15,3" 
+						Margin="0,0,0,4" 
+						CornerRadius="40" 
+						FontSize="22" 
+						HorizontalAlignment="Center"/>
+					
+					<Label 
+						Foreground="{TemplateBinding Foreground}" 
+						Content="{TemplateBinding SmallText}"
+						Padding="0" 
+						Margin="0,0,0,7" 
+						FontSize="11" 
+						HorizontalAlignment="Center"/>
+				</StackPanel>
+			</ControlTemplate>
+		</Setter>
+	</Style>
+</Styles>
